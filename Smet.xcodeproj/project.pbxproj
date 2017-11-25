@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A4765B9FD459BD84A08B201 /* libPods-Smet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34857457700AD7421F31DB5 /* libPods-Smet.a */; };
+		D9B31DD81FC5F66400EAD37E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DD71FC5F66400EAD37E /* AppDelegate.m */; };
+		D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDC1FC5F66400EAD37E /* Main.storyboard */; };
+		D9B31DE01FC5F66400EAD37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDF1FC5F66400EAD37E /* Assets.xcassets */; };
+		D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */; };
+		D9B31DE61FC5F66400EAD37E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DE51FC5F66400EAD37E /* main.m */; };
+		D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DEF1FC7621500EAD37E /* LoginViewController.m */; };
+		D9B31DF81FC763FB00EAD37E /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DF71FC763FB00EAD37E /* Profile.m */; };
+		D9B31DFB1FC7645D00EAD37E /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DFA1FC7645D00EAD37E /* Product.m */; };
+		D9B31DFE1FC76F5500EAD37E /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DFD1FC76F5500EAD37E /* InitialViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2169A235FCE5AD6D15657FA6 /* Pods-Smet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smet/Pods-Smet.release.xcconfig"; sourceTree = "<group>"; };
+		D9B31DD31FC5F66400EAD37E /* Smet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B31DD61FC5F66400EAD37E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D9B31DD71FC5F66400EAD37E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D9B31DDD1FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D9B31DDF1FC5F66400EAD37E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9B31DE21FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9B31DE41FC5F66400EAD37E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9B31DE51FC5F66400EAD37E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D9B31DEE1FC7621500EAD37E /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D9B31DEF1FC7621500EAD37E /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D9B31DF61FC763FB00EAD37E /* Profile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		D9B31DF71FC763FB00EAD37E /* Profile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		D9B31DF91FC7645D00EAD37E /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		D9B31DFA1FC7645D00EAD37E /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		D9B31DFC1FC76F5500EAD37E /* InitialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = ../../../InitialViewController.h; sourceTree = "<group>"; };
+		D9B31DFD1FC76F5500EAD37E /* InitialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = ../../../InitialViewController.m; sourceTree = "<group>"; };
+		E34857457700AD7421F31DB5 /* libPods-Smet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2953FEEB9D3A7768B9981F /* Pods-Smet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smet/Pods-Smet.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9B31DD01FC5F66400EAD37E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4765B9FD459BD84A08B201 /* libPods-Smet.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB8EB5A6A23B3946598DFDC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E34857457700AD7421F31DB5 /* libPods-Smet.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9B31DCA1FC5F66300EAD37E = {
+			isa = PBXGroup;
+			children = (
+				D9B31DD51FC5F66400EAD37E /* Smet */,
+				D9B31DEC1FC75CDC00EAD37E /* Support Files */,
+				D9B31DD41FC5F66400EAD37E /* Products */,
+				F6ADAD7D2CA4D18A18C3B3B4 /* Pods */,
+				AB8EB5A6A23B3946598DFDC5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D9B31DD41FC5F66400EAD37E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9B31DD31FC5F66400EAD37E /* Smet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9B31DD51FC5F66400EAD37E /* Smet */ = {
+			isa = PBXGroup;
+			children = (
+				D9B31DF11FC7624E00EAD37E /* ViewControllers */,
+				D9B31DED1FC75D1200EAD37E /* IB */,
+				D9B31DF51FC762CE00EAD37E /* Model */,
+			);
+			path = Smet;
+			sourceTree = "<group>";
+		};
+		D9B31DEC1FC75CDC00EAD37E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9B31DE51FC5F66400EAD37E /* main.m */,
+				D9B31DD61FC5F66400EAD37E /* AppDelegate.h */,
+				D9B31DD71FC5F66400EAD37E /* AppDelegate.m */,
+				D9B31DDF1FC5F66400EAD37E /* Assets.xcassets */,
+				D9B31DE41FC5F66400EAD37E /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		D9B31DED1FC75D1200EAD37E /* IB */ = {
+			isa = PBXGroup;
+			children = (
+				D9B31DDC1FC5F66400EAD37E /* Main.storyboard */,
+				D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */,
+			);
+			path = IB;
+			sourceTree = "<group>";
+		};
+		D9B31DF11FC7624E00EAD37E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D9B31DFC1FC76F5500EAD37E /* InitialViewController.h */,
+				D9B31DFD1FC76F5500EAD37E /* InitialViewController.m */,
+				D9B31DEE1FC7621500EAD37E /* LoginViewController.h */,
+				D9B31DEF1FC7621500EAD37E /* LoginViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D9B31DF51FC762CE00EAD37E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9B31DF61FC763FB00EAD37E /* Profile.h */,
+				D9B31DF71FC763FB00EAD37E /* Profile.m */,
+				D9B31DF91FC7645D00EAD37E /* Product.h */,
+				D9B31DFA1FC7645D00EAD37E /* Product.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6ADAD7D2CA4D18A18C3B3B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED2953FEEB9D3A7768B9981F /* Pods-Smet.debug.xcconfig */,
+				2169A235FCE5AD6D15657FA6 /* Pods-Smet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9B31DD21FC5F66400EAD37E /* Smet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9B31DE91FC5F66400EAD37E /* Build configuration list for PBXNativeTarget "Smet" */;
+			buildPhases = (
+				0AC8EE111B0D191FD3367228 /* [CP] Check Pods Manifest.lock */,
+				D9B31DCF1FC5F66400EAD37E /* Sources */,
+				D9B31DD01FC5F66400EAD37E /* Frameworks */,
+				D9B31DD11FC5F66400EAD37E /* Resources */,
+				98992DD6ED90EFE74CCFE5FA /* [CP] Embed Pods Frameworks */,
+				E901E8A29D359A0EB1D2E8D8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Smet;
+			productName = Smet;
+			productReference = D9B31DD31FC5F66400EAD37E /* Smet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9B31DCB1FC5F66300EAD37E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = VG;
+				TargetAttributes = {
+					D9B31DD21FC5F66400EAD37E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D9B31DCE1FC5F66300EAD37E /* Build configuration list for PBXProject "Smet" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9B31DCA1FC5F66300EAD37E;
+			productRefGroup = D9B31DD41FC5F66400EAD37E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9B31DD21FC5F66400EAD37E /* Smet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9B31DD11FC5F66400EAD37E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */,
+				D9B31DE01FC5F66400EAD37E /* Assets.xcassets in Resources */,
+				D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AC8EE111B0D191FD3367228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98992DD6ED90EFE74CCFE5FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smet/Pods-Smet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E901E8A29D359A0EB1D2E8D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smet/Pods-Smet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9B31DCF1FC5F66400EAD37E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9B31DE61FC5F66400EAD37E /* main.m in Sources */,
+				D9B31DFB1FC7645D00EAD37E /* Product.m in Sources */,
+				D9B31DF81FC763FB00EAD37E /* Profile.m in Sources */,
+				D9B31DFE1FC76F5500EAD37E /* InitialViewController.m in Sources */,
+				D9B31DD81FC5F66400EAD37E /* AppDelegate.m in Sources */,
+				D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D9B31DDC1FC5F66400EAD37E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B31DDD1FC5F66400EAD37E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9B31DE21FC5F66400EAD37E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D9B31DE71FC5F66400EAD37E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D9B31DE81FC5F66400EAD37E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9B31DEA1FC5F66400EAD37E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED2953FEEB9D3A7768B9981F /* Pods-Smet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Smet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vahan-Grigoryan.Smet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9B31DEB1FC5F66400EAD37E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2169A235FCE5AD6D15657FA6 /* Pods-Smet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Smet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Vahan-Grigoryan.Smet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9B31DCE1FC5F66300EAD37E /* Build configuration list for PBXProject "Smet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B31DE71FC5F66400EAD37E /* Debug */,
+				D9B31DE81FC5F66400EAD37E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9B31DE91FC5F66400EAD37E /* Build configuration list for PBXNativeTarget "Smet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B31DEA1FC5F66400EAD37E /* Debug */,
+				D9B31DEB1FC5F66400EAD37E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9B31DCB1FC5F66300EAD37E /* Project object */;
+}
