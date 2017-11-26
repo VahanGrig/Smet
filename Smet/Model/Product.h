@@ -10,5 +10,9 @@
 
 @interface Product : RLMObject
 
+@property NSString *producerName;
+@property NSString *productImageURL;
+@property NSString *ProductPageURL;
+
 @end
 RLM_ARRAY_TYPE(Product)

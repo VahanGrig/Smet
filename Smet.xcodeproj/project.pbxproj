@@ -11,6 +11,8 @@
 		D95030251FC98F6B00C97680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95030221FC98F6B00C97680 /* Assets.xcassets */; };
 		D95030261FC98F6B00C97680 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030231FC98F6B00C97680 /* main.m */; };
 		D95030271FC98F6B00C97680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030241FC98F6B00C97680 /* AppDelegate.m */; };
+		D950302D1FCAE61300C97680 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = D950302C1FCAE61300C97680 /* Card.m */; };
+		D95030301FCAE74B00C97680 /* AllProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = D950302F1FCAE74B00C97680 /* AllProducts.m */; };
 		D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDC1FC5F66400EAD37E /* Main.storyboard */; };
 		D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */; };
 		D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DEF1FC7621500EAD37E /* LoginViewController.m */; };
@@ -26,6 +28,10 @@
 		D95030221FC98F6B00C97680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D95030231FC98F6B00C97680 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D95030241FC98F6B00C97680 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D950302B1FCAE61300C97680 /* Card.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		D950302C1FCAE61300C97680 /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		D950302E1FCAE74B00C97680 /* AllProducts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllProducts.h; sourceTree = "<group>"; };
+		D950302F1FCAE74B00C97680 /* AllProducts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllProducts.m; sourceTree = "<group>"; };
 		D9B31DD31FC5F66400EAD37E /* Smet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B31DDD1FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B31DE21FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,10 +134,14 @@
 		D9B31DF51FC762CE00EAD37E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D9B31DF61FC763FB00EAD37E /* Profile.h */,
-				D9B31DF71FC763FB00EAD37E /* Profile.m */,
+				D950302E1FCAE74B00C97680 /* AllProducts.h */,
+				D950302F1FCAE74B00C97680 /* AllProducts.m */,
 				D9B31DF91FC7645D00EAD37E /* Product.h */,
 				D9B31DFA1FC7645D00EAD37E /* Product.m */,
+				D9B31DF61FC763FB00EAD37E /* Profile.h */,
+				D9B31DF71FC763FB00EAD37E /* Profile.m */,
+				D950302B1FCAE61300C97680 /* Card.h */,
+				D950302C1FCAE61300C97680 /* Card.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D95030301FCAE74B00C97680 /* AllProducts.m in Sources */,
 				D9B31DFB1FC7645D00EAD37E /* Product.m in Sources */,
 				D9B31DF81FC763FB00EAD37E /* Profile.m in Sources */,
 				D9B31E0C1FC94D8E00EAD37E /* RequestManager.m in Sources */,
+				D950302D1FCAE61300C97680 /* Card.m in Sources */,
 				D9B31E091FC94A2800EAD37E /* InitialViewController.m in Sources */,
 				D95030261FC98F6B00C97680 /* main.m in Sources */,
 				D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */,
