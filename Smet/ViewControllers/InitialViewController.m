@@ -21,9 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[RequestManager manager] getCategoriesWithCompletion:^(id result) {
-        
-    }];
 }
 
 - (void)didReceiveMemoryWarning {

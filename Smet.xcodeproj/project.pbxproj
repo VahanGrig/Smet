@@ -13,6 +13,8 @@
 		D95030271FC98F6B00C97680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030241FC98F6B00C97680 /* AppDelegate.m */; };
 		D950302D1FCAE61300C97680 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = D950302C1FCAE61300C97680 /* Card.m */; };
 		D95030301FCAE74B00C97680 /* AllProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = D950302F1FCAE74B00C97680 /* AllProducts.m */; };
+		D95030341FCB0F8A00C97680 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030331FCB0F8A00C97680 /* MainViewController.m */; };
+		D95030371FCB33B200C97680 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030361FCB33B200C97680 /* ProductCell.m */; };
 		D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDC1FC5F66400EAD37E /* Main.storyboard */; };
 		D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */; };
 		D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DEF1FC7621500EAD37E /* LoginViewController.m */; };
@@ -32,6 +34,10 @@
 		D950302C1FCAE61300C97680 /* Card.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		D950302E1FCAE74B00C97680 /* AllProducts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllProducts.h; sourceTree = "<group>"; };
 		D950302F1FCAE74B00C97680 /* AllProducts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllProducts.m; sourceTree = "<group>"; };
+		D95030321FCB0F8A00C97680 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D95030331FCB0F8A00C97680 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D95030351FCB33B200C97680 /* ProductCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
+		D95030361FCB33B200C97680 /* ProductCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
 		D9B31DD31FC5F66400EAD37E /* Smet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B31DDD1FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B31DE21FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +95,15 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		D95030381FCB33CE00C97680 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D95030351FCB33B200C97680 /* ProductCell.h */,
+				D95030361FCB33B200C97680 /* ProductCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D9B31DCA1FC5F66300EAD37E = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +125,8 @@
 		D9B31DD51FC5F66400EAD37E /* Smet */ = {
 			isa = PBXGroup;
 			children = (
-				D95030311FCAE92100C97680 /* API */,
 				D9B31DF11FC7624E00EAD37E /* ViewControllers */,
+				D95030381FCB33CE00C97680 /* Cell */,
 				D9B31DED1FC75D1200EAD37E /* IB */,
 				D9B31DF51FC762CE00EAD37E /* Model */,
 				D95030201FC98F6B00C97680 /* Support Files */,
@@ -135,6 +150,8 @@
 				D9B31E071FC94A2800EAD37E /* InitialViewController.m */,
 				D9B31DEE1FC7621500EAD37E /* LoginViewController.h */,
 				D9B31DEF1FC7621500EAD37E /* LoginViewController.m */,
+				D95030321FCB0F8A00C97680 /* MainViewController.h */,
+				D95030331FCB0F8A00C97680 /* MainViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -142,6 +159,7 @@
 		D9B31DF51FC762CE00EAD37E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D95030311FCAE92100C97680 /* API */,
 				D950302E1FCAE74B00C97680 /* AllProducts.h */,
 				D950302F1FCAE74B00C97680 /* AllProducts.m */,
 				D9B31DF91FC7645D00EAD37E /* Product.h */,
@@ -291,9 +309,11 @@
 				D95030301FCAE74B00C97680 /* AllProducts.m in Sources */,
 				D9B31DFB1FC7645D00EAD37E /* Product.m in Sources */,
 				D9B31DF81FC763FB00EAD37E /* Profile.m in Sources */,
+				D95030341FCB0F8A00C97680 /* MainViewController.m in Sources */,
 				D9B31E0C1FC94D8E00EAD37E /* RequestManager.m in Sources */,
 				D950302D1FCAE61300C97680 /* Card.m in Sources */,
 				D9B31E091FC94A2800EAD37E /* InitialViewController.m in Sources */,
+				D95030371FCB33B200C97680 /* ProductCell.m in Sources */,
 				D95030261FC98F6B00C97680 /* main.m in Sources */,
 				D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */,
 				D95030271FC98F6B00C97680 /* AppDelegate.m in Sources */,
