@@ -10,9 +10,12 @@
 
 @interface Product : RLMObject
 
+@property NSInteger id;
 @property NSString *producerName;
-@property NSString *productImageURL;
-@property NSString *ProductPageURL;
+@property NSString *productImageURLString;
+@property NSString *productPageURLString;
+
++ (Product *)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 RLM_ARRAY_TYPE(Product)

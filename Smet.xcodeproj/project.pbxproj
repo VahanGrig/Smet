@@ -80,6 +80,15 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
+		D95030311FCAE92100C97680 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D9B31E0A1FC94D8E00EAD37E /* RequestManager.h */,
+				D9B31E0B1FC94D8E00EAD37E /* RequestManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		D9B31DCA1FC5F66300EAD37E = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +110,7 @@
 		D9B31DD51FC5F66400EAD37E /* Smet */ = {
 			isa = PBXGroup;
 			children = (
-				D9B31E0A1FC94D8E00EAD37E /* RequestManager.h */,
-				D9B31E0B1FC94D8E00EAD37E /* RequestManager.m */,
+				D95030311FCAE92100C97680 /* API */,
 				D9B31DF11FC7624E00EAD37E /* ViewControllers */,
 				D9B31DED1FC75D1200EAD37E /* IB */,
 				D9B31DF51FC762CE00EAD37E /* Model */,

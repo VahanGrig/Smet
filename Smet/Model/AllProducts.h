@@ -11,6 +11,7 @@
 
 @interface AllProducts : RLMObject
 
+@property NSInteger id;
 @property RLMArray <Product> *products;
 
 @end

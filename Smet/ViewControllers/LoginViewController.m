@@ -76,17 +76,16 @@
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     if (self.emailTextField.text.length && self.passwordTextField.text.length) {
-    Profile *newProfile = [Profile new];
-    newProfile.emaleString = self.emailTextField.text;
-    newProfile.passwordString = self.passwordTextField.text;
-    newProfile.isLogged = @"1";
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    [realm beginWriteTransaction];
-    [Profile createInRealm:realm withValue:newProfile];
-    [realm commitWriteTransaction];
+        Profile *newProfile = [Profile new];
+        newProfile.emaleString = self.emailTextField.text;
+        newProfile.passwordString = self.passwordTextField.text;
+        newProfile.isLogged = @"1";
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm beginWriteTransaction];
+        [Profile createInRealm:realm withValue:newProfile];
+        [realm commitWriteTransaction];
+        [self performSegueWithIdentifier:@"loginMain" sender:nil];
     }
 }
-
-
 
 @end

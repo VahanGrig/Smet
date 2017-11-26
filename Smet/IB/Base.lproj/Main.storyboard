@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gT-DU-bGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.8" y="-314.39280359820094"/>
+            <point key="canvasLocation" x="2983" y="32"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4C3-e6-RxV">
@@ -162,11 +162,15 @@
                         <outlet property="loginButton" destination="6e0-9b-9lF" id="bja-tJ-DGP"/>
                         <outlet property="passwordTextField" destination="Bo8-aH-k7Q" id="reE-6s-5q7"/>
                         <outlet property="scrollView" destination="hEq-V3-vHX" id="HUk-7X-ycQ"/>
+                        <segue destination="dWi-4g-C4G" kind="show" identifier="loginMain" id="34n-yi-Lhk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW3-3J-yZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.8" y="336.88155922038982"/>
+            <point key="canvasLocation" x="1954" y="439"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="34n-yi-Lhk"/>
+    </inferredMetricsTieBreakers>
 </document>

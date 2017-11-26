@@ -10,4 +10,8 @@
 
 @implementation AllProducts
 
++ (NSString *)primaryKey {
+    return @"id";
+}
+
 @end

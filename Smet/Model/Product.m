@@ -10,4 +10,29 @@
 
 @implementation Product
 
++ (Product *)initWithDictionary:(NSDictionary *)dictionary {
+    Product *newProduct = [Product new];
+    
+    if (dictionary[@"url"]) {
+        NSString *string = dictionary[@"url"];
+        NSMutableString *productString = string.mutableCopy;
+        if ([productString hasPrefix:@"http://dev.m."]) {
+            [productString replaceCharactersInRange:NSMakeRange(0, [@"http://dev.m." length]) withString:@"http:"];
+        }
+        newProduct.productPageURLString = productString;
+    }
+    if (dictionary[@"coverUrl"]) {
+        newProduct.productImageURLString = [NSString stringWithFormat:@"http:%@", dictionary[@"coverUrl"]];
+    }
+    if (dictionary[@"producer"][@"name"]) {
+        newProduct.producerName = dictionary[@"producer"][@"name"];
+    }
+    
+    return newProduct;
+}
+
++ (NSString *)primaryKey {
+    return @"id";
+}
+
 @end
