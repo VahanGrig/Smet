@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "ProducerViewController.h"
 #import "ProductCell.h"
 #import "AllProducts.h"
 
@@ -76,7 +77,8 @@ static NSString *cellIdentifier = @"productCell";
 #pragma mark - segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(Product *)sender {
-    
+    ProducerViewController *vc = [segue destinationViewController];
+    vc.product = sender;
 }
 
 - (IBAction)moreButtonPressed:(UIBarButtonItem *)sender {

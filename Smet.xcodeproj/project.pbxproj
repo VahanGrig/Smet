@@ -15,6 +15,7 @@
 		D95030301FCAE74B00C97680 /* AllProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = D950302F1FCAE74B00C97680 /* AllProducts.m */; };
 		D95030341FCB0F8A00C97680 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030331FCB0F8A00C97680 /* MainViewController.m */; };
 		D95030371FCB33B200C97680 /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030361FCB33B200C97680 /* ProductCell.m */; };
+		D950303E1FCB4E3300C97680 /* ProducerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D950303D1FCB4E3300C97680 /* ProducerViewController.m */; };
 		D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDC1FC5F66400EAD37E /* Main.storyboard */; };
 		D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */; };
 		D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DEF1FC7621500EAD37E /* LoginViewController.m */; };
@@ -38,6 +39,8 @@
 		D95030331FCB0F8A00C97680 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D95030351FCB33B200C97680 /* ProductCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
 		D95030361FCB33B200C97680 /* ProductCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		D950303C1FCB4E3300C97680 /* ProducerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProducerViewController.h; sourceTree = "<group>"; };
+		D950303D1FCB4E3300C97680 /* ProducerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProducerViewController.m; sourceTree = "<group>"; };
 		D9B31DD31FC5F66400EAD37E /* Smet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B31DDD1FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B31DE21FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				D9B31DEF1FC7621500EAD37E /* LoginViewController.m */,
 				D95030321FCB0F8A00C97680 /* MainViewController.h */,
 				D95030331FCB0F8A00C97680 /* MainViewController.m */,
+				D950303C1FCB4E3300C97680 /* ProducerViewController.h */,
+				D950303D1FCB4E3300C97680 /* ProducerViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 			files = (
 				D95030301FCAE74B00C97680 /* AllProducts.m in Sources */,
 				D9B31DFB1FC7645D00EAD37E /* Product.m in Sources */,
+				D950303E1FCB4E3300C97680 /* ProducerViewController.m in Sources */,
 				D9B31DF81FC763FB00EAD37E /* Profile.m in Sources */,
 				D95030341FCB0F8A00C97680 /* MainViewController.m in Sources */,
 				D9B31E0C1FC94D8E00EAD37E /* RequestManager.m in Sources */,
