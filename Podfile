@@ -9,4 +9,5 @@ target 'Smet' do
 pod “Realm”
 pod 'Realm/Headers'
 pod 'AFNetworking', '~> 3.0'
+pod 'SDWebImage', '~> 4.0'
 end

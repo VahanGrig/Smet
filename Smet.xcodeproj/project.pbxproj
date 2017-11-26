@@ -8,19 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		7A4765B9FD459BD84A08B201 /* libPods-Smet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34857457700AD7421F31DB5 /* libPods-Smet.a */; };
+		D95030251FC98F6B00C97680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95030221FC98F6B00C97680 /* Assets.xcassets */; };
+		D95030261FC98F6B00C97680 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030231FC98F6B00C97680 /* main.m */; };
+		D95030271FC98F6B00C97680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030241FC98F6B00C97680 /* AppDelegate.m */; };
 		D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDC1FC5F66400EAD37E /* Main.storyboard */; };
 		D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */; };
 		D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DEF1FC7621500EAD37E /* LoginViewController.m */; };
 		D9B31DF81FC763FB00EAD37E /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DF71FC763FB00EAD37E /* Profile.m */; };
 		D9B31DFB1FC7645D00EAD37E /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DFA1FC7645D00EAD37E /* Product.m */; };
-		D9B31E041FC94A1300EAD37E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B31E011FC94A1300EAD37E /* Assets.xcassets */; };
-		D9B31E051FC94A1300EAD37E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31E021FC94A1300EAD37E /* main.m */; };
-		D9B31E061FC94A1300EAD37E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31E031FC94A1300EAD37E /* AppDelegate.m */; };
 		D9B31E091FC94A2800EAD37E /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31E071FC94A2800EAD37E /* InitialViewController.m */; };
+		D9B31E0C1FC94D8E00EAD37E /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31E0B1FC94D8E00EAD37E /* RequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2169A235FCE5AD6D15657FA6 /* Pods-Smet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smet.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smet/Pods-Smet.release.xcconfig"; sourceTree = "<group>"; };
+		D95030211FC98F6B00C97680 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D95030221FC98F6B00C97680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D95030231FC98F6B00C97680 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D95030241FC98F6B00C97680 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D9B31DD31FC5F66400EAD37E /* Smet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B31DDD1FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B31DE21FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,12 +35,10 @@
 		D9B31DF71FC763FB00EAD37E /* Profile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		D9B31DF91FC7645D00EAD37E /* Product.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		D9B31DFA1FC7645D00EAD37E /* Product.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
-		D9B31E001FC94A1300EAD37E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D9B31E011FC94A1300EAD37E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D9B31E021FC94A1300EAD37E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D9B31E031FC94A1300EAD37E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D9B31E071FC94A2800EAD37E /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
 		D9B31E081FC94A2800EAD37E /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
+		D9B31E0A1FC94D8E00EAD37E /* RequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		D9B31E0B1FC94D8E00EAD37E /* RequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
 		E34857457700AD7421F31DB5 /* libPods-Smet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2953FEEB9D3A7768B9981F /* Pods-Smet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smet/Pods-Smet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,11 +63,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D95030201FC98F6B00C97680 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D95030211FC98F6B00C97680 /* AppDelegate.h */,
+				D95030221FC98F6B00C97680 /* Assets.xcassets */,
+				D95030231FC98F6B00C97680 /* main.m */,
+				D95030241FC98F6B00C97680 /* AppDelegate.m */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		D9B31DCA1FC5F66300EAD37E = {
 			isa = PBXGroup;
 			children = (
 				D9B31DD51FC5F66400EAD37E /* Smet */,
-				D9B31DFF1FC94A1300EAD37E /* Support Files */,
 				D9B31DD41FC5F66400EAD37E /* Products */,
 				F6ADAD7D2CA4D18A18C3B3B4 /* Pods */,
 				AB8EB5A6A23B3946598DFDC5 /* Frameworks */,
@@ -82,9 +95,12 @@
 		D9B31DD51FC5F66400EAD37E /* Smet */ = {
 			isa = PBXGroup;
 			children = (
+				D9B31E0A1FC94D8E00EAD37E /* RequestManager.h */,
+				D9B31E0B1FC94D8E00EAD37E /* RequestManager.m */,
 				D9B31DF11FC7624E00EAD37E /* ViewControllers */,
 				D9B31DED1FC75D1200EAD37E /* IB */,
 				D9B31DF51FC762CE00EAD37E /* Model */,
+				D95030201FC98F6B00C97680 /* Support Files */,
 			);
 			path = Smet;
 			sourceTree = "<group>";
@@ -118,17 +134,6 @@
 				D9B31DFA1FC7645D00EAD37E /* Product.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D9B31DFF1FC94A1300EAD37E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D9B31E001FC94A1300EAD37E /* AppDelegate.h */,
-				D9B31E011FC94A1300EAD37E /* Assets.xcassets */,
-				D9B31E021FC94A1300EAD37E /* main.m */,
-				D9B31E031FC94A1300EAD37E /* AppDelegate.m */,
-			);
-			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		F6ADAD7D2CA4D18A18C3B3B4 /* Pods */ = {
@@ -202,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */,
-				D9B31E041FC94A1300EAD37E /* Assets.xcassets in Resources */,
+				D95030251FC98F6B00C97680 /* Assets.xcassets in Resources */,
 				D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,10 +272,11 @@
 			files = (
 				D9B31DFB1FC7645D00EAD37E /* Product.m in Sources */,
 				D9B31DF81FC763FB00EAD37E /* Profile.m in Sources */,
-				D9B31E051FC94A1300EAD37E /* main.m in Sources */,
+				D9B31E0C1FC94D8E00EAD37E /* RequestManager.m in Sources */,
 				D9B31E091FC94A2800EAD37E /* InitialViewController.m in Sources */,
+				D95030261FC98F6B00C97680 /* main.m in Sources */,
 				D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */,
-				D9B31E061FC94A1300EAD37E /* AppDelegate.m in Sources */,
+				D95030271FC98F6B00C97680 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

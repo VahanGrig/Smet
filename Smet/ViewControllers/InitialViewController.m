@@ -8,6 +8,7 @@
 
 #import "InitialViewController.h"
 #import "Profile.h"
+#import "RequestManager.h"
 
 @interface InitialViewController ()
 
@@ -20,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[RequestManager manager] getCategoriesWithCompletion:^(id result) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,9 +35,9 @@
     [super viewDidAppear:animated];
     self.profilesArray = [[Profile allObjects] sortedResultsUsingKeyPath:@"profileID" ascending:YES];
     if (self.profilesArray.count > 0) {
-        [self performSegueWithIdentifier:@"login" sender:nil];
-    } else {
         [self performSegueWithIdentifier:@"main" sender:nil];
+    } else {
+        [self performSegueWithIdentifier:@"login" sender:nil];
     }
 }
 
