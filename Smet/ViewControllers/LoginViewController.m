@@ -80,6 +80,7 @@
         newProfile.emaleString = self.emailTextField.text;
         newProfile.passwordString = self.passwordTextField.text;
         newProfile.isLogged = @"1";
+        newProfile.id = 1;
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm beginWriteTransaction];
         [Profile createInRealm:realm withValue:newProfile];

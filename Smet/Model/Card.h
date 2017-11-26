@@ -10,8 +10,9 @@
 
 @interface Card : RLMObject
 
+@property NSInteger id;
 @property NSString *cardName;
-@property NSInteger cardNumber;
+@property NSString *cardNumber;
 @property NSInteger order;
 
 @end

@@ -217,6 +217,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="qO6-WD-Xvn" id="0Ss-Y2-CzH"/>
+                        <segue destination="U4K-15-EMR" kind="show" identifier="addCard" id="IoI-Qc-Yyh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfj-7E-av3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -326,6 +327,109 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IW3-3J-yZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1954" y="439"/>
+        </scene>
+        <!--Add Card View Controller-->
+        <scene sceneID="nwB-gh-qxn">
+            <objects>
+                <viewController id="U4K-15-EMR" customClass="AddCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gfu-3G-zN3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hk9-jW-Eqv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-97-QEw">
+                                        <rect key="frame" x="68" y="419" width="240" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.73135544480000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Rva-mm-Brl"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="kSq-Zy-lVo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="U4K-15-EMR" eventType="touchUpInside" id="GSn-ob-wWl"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h51-EQ-Gf7">
+                                        <rect key="frame" x="68" y="234" width="240" height="40"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.20501821319999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ell-uB-QrN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="RPl-6f-bsv"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="U4K-15-EMR" id="pJA-KY-XkG"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DH3-H4-cfb">
+                                        <rect key="frame" x="67" y="307" width="240" height="40"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.32623178679999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Tbz-Px-iQN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="cDz-gj-iGq"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="U4K-15-EMR" id="Bg3-Zd-0Q3"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DH3-H4-cfb" firstAttribute="centerX" secondItem="Hk9-jW-Eqv" secondAttribute="centerX" id="Bce-Zo-vED"/>
+                                    <constraint firstItem="DH3-H4-cfb" firstAttribute="top" secondItem="h51-EQ-Gf7" secondAttribute="bottom" constant="33" id="BiC-Ie-5R8"/>
+                                    <constraint firstItem="hS5-97-QEw" firstAttribute="centerX" secondItem="Hk9-jW-Eqv" secondAttribute="centerX" id="Fpn-51-Qac"/>
+                                    <constraint firstAttribute="trailing" secondItem="hS5-97-QEw" secondAttribute="trailing" constant="67" id="TXX-3G-Llj"/>
+                                    <constraint firstItem="h51-EQ-Gf7" firstAttribute="centerX" secondItem="Hk9-jW-Eqv" secondAttribute="centerX" id="au5-Tb-c7r"/>
+                                    <constraint firstItem="h51-EQ-Gf7" firstAttribute="top" secondItem="Hk9-jW-Eqv" secondAttribute="top" constant="234" id="e1I-t8-7Fz"/>
+                                    <constraint firstAttribute="bottom" secondItem="hS5-97-QEw" secondAttribute="bottom" constant="208" id="iom-g5-gGJ"/>
+                                    <constraint firstItem="hS5-97-QEw" firstAttribute="top" secondItem="DH3-H4-cfb" secondAttribute="bottom" constant="72" id="ypK-dx-lVV"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hk9-jW-Eqv" firstAttribute="trailing" secondItem="CVY-7J-TH6" secondAttribute="trailing" id="20q-ZN-xg5"/>
+                            <constraint firstItem="Hk9-jW-Eqv" firstAttribute="leading" secondItem="CVY-7J-TH6" secondAttribute="leading" id="gyD-br-XOj"/>
+                            <constraint firstItem="Hk9-jW-Eqv" firstAttribute="top" secondItem="Gfu-3G-zN3" secondAttribute="top" id="obE-u1-Izo"/>
+                            <constraint firstItem="Hk9-jW-Eqv" firstAttribute="bottom" secondItem="CVY-7J-TH6" secondAttribute="bottom" id="oca-Kk-kN3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CVY-7J-TH6"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardNameTextField" destination="h51-EQ-Gf7" id="z4y-pa-Bux"/>
+                        <outlet property="cardNumberTextField" destination="DH3-H4-cfb" id="CHk-Pf-FHu"/>
+                        <outlet property="saveButton" destination="hS5-97-QEw" id="HKk-xo-H7l"/>
+                        <outlet property="scrollView" destination="Hk9-jW-Eqv" id="atG-mx-JQR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8qy-5j-QM6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5644" y="-239"/>
         </scene>
     </scenes>
     <resources>

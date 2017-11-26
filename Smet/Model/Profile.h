@@ -11,6 +11,7 @@
 
 @interface Profile : RLMObject
 
+@property NSInteger id;
 @property RLMArray <Card> *cards;
 @property NSString *emaleString;
 @property NSString *passwordString;

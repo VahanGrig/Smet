@@ -18,6 +18,7 @@
 		D950303E1FCB4E3300C97680 /* ProducerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D950303D1FCB4E3300C97680 /* ProducerViewController.m */; };
 		D95030411FCB526A00C97680 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030401FCB526A00C97680 /* CardViewController.m */; };
 		D95030441FCB56A800C97680 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030431FCB56A800C97680 /* CardCell.m */; };
+		D95030471FCB5F3D00C97680 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030461FCB5F3D00C97680 /* AddCardViewController.m */; };
 		D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDC1FC5F66400EAD37E /* Main.storyboard */; };
 		D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */; };
 		D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DEF1FC7621500EAD37E /* LoginViewController.m */; };
@@ -47,6 +48,8 @@
 		D95030401FCB526A00C97680 /* CardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		D95030421FCB56A800C97680 /* CardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
 		D95030431FCB56A800C97680 /* CardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		D95030451FCB5F3D00C97680 /* AddCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
+		D95030461FCB5F3D00C97680 /* AddCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		D9B31DD31FC5F66400EAD37E /* Smet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B31DDD1FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B31DE21FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				D950303D1FCB4E3300C97680 /* ProducerViewController.m */,
 				D950303F1FCB526A00C97680 /* CardViewController.h */,
 				D95030401FCB526A00C97680 /* CardViewController.m */,
+				D95030451FCB5F3D00C97680 /* AddCardViewController.h */,
+				D95030461FCB5F3D00C97680 /* AddCardViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -329,6 +334,7 @@
 				D95030341FCB0F8A00C97680 /* MainViewController.m in Sources */,
 				D9B31E0C1FC94D8E00EAD37E /* RequestManager.m in Sources */,
 				D950302D1FCAE61300C97680 /* Card.m in Sources */,
+				D95030471FCB5F3D00C97680 /* AddCardViewController.m in Sources */,
 				D9B31E091FC94A2800EAD37E /* InitialViewController.m in Sources */,
 				D95030371FCB33B200C97680 /* ProductCell.m in Sources */,
 				D95030261FC98F6B00C97680 /* main.m in Sources */,

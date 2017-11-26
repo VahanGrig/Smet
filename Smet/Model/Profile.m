@@ -10,4 +10,8 @@
 
 @implementation Profile
 
++ (NSString *)primaryKey {
+    return @"id";
+}
+
 @end

@@ -28,20 +28,25 @@ static NSString *cellIdentifier = @"cardCell";
     [self.collectionView registerClass:[CardCell class] forCellWithReuseIdentifier: cellIdentifier];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.profilesArray = [[Profile allObjects] sortedResultsUsingKeyPath:@"profileID" ascending:YES];
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;// [self.profilesArray[0].cards count];
+    return [self.profilesArray[0].cards count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    [cell initWithCardName:@"cardName"];
+    Card *currentCard = self.profilesArray[0].cards[indexPath.row];
+    [cell initWithCardName:currentCard.cardName];
+    cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    cell.layer.borderWidth = 1;
+    cell.layer.cornerRadius = 4;
     return cell;
 }
 
@@ -58,7 +63,7 @@ static NSString *cellIdentifier = @"cardCell";
 
 
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
-
+    [self performSegueWithIdentifier:@"addCard" sender:nil];
 }
 
 @end

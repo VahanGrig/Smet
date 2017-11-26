@@ -10,4 +10,8 @@
 
 @implementation Card
 
++ (NSString *)primaryKey {
+    return @"id";
+}
+
 @end
