@@ -10,4 +10,6 @@
 
 @interface MainViewController : UIViewController
 
+- (IBAction)moreButtonPressed:(UIBarButtonItem *)sender;
+
 @end
