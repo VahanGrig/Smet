@@ -216,7 +216,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButtonPressed" destination="iUf-6Y-ad1" id="xwk-Zb-pfc"/>
                         <outlet property="collectionView" destination="qO6-WD-Xvn" id="0Ss-Y2-CzH"/>
                     </connections>
                 </viewController>

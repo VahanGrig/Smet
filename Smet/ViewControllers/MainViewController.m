@@ -77,12 +77,14 @@ static NSString *cellIdentifier = @"productCell";
 #pragma mark - segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(Product *)sender {
+    if ([segue.identifier isEqualToString:@"producer"]) {
     ProducerViewController *vc = [segue destinationViewController];
     vc.product = sender;
+    }
 }
 
 - (IBAction)moreButtonPressed:(UIBarButtonItem *)sender {
-
+    [self performSegueWithIdentifier:@"card" sender:nil];
 }
 
 @end

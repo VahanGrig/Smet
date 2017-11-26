@@ -10,4 +10,8 @@
 
 @interface CardCell : UICollectionViewCell
 
+@property (nonatomic) UILabel *cardName;
+
+- (void)initWithCardName:(NSString *)cardName;
+
 @end

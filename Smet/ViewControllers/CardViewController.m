@@ -36,11 +36,12 @@ static NSString *cellIdentifier = @"cardCell";
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.profilesArray[0].cards count];
+    return 4;// [self.profilesArray[0].cards count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    [cell initWithCardName:@"cardName"];
     return cell;
 }
 
