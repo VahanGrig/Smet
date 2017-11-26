@@ -129,6 +129,7 @@
                     <connections>
                         <outlet property="collection" destination="KRv-tJ-jz6" id="FNW-JW-vsV"/>
                         <segue destination="wz1-ca-0NW" kind="show" identifier="producer" id="leH-84-Yuv"/>
+                        <segue destination="YwB-J7-oiz" kind="show" identifier="card" id="sJj-38-7QX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gT-DU-bGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,7 +164,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tec-KI-Wgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4324" y="42.728635682158924"/>
+            <point key="canvasLocation" x="4734" y="439"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="DRE-lz-0wa">
+            <objects>
+                <viewController id="YwB-J7-oiz" customClass="CardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0DW-iO-roN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qO6-WD-Xvn">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Oa3-kI-fiL">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="uXT-uS-J9p" customClass="CardCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="YwB-J7-oiz" id="wTC-Db-xSc"/>
+                                    <outlet property="delegate" destination="YwB-J7-oiz" id="Ame-fd-jfr"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qO6-WD-Xvn" firstAttribute="leading" secondItem="uqD-FQ-YyW" secondAttribute="leading" id="8JQ-CP-VKs"/>
+                            <constraint firstItem="qO6-WD-Xvn" firstAttribute="trailing" secondItem="uqD-FQ-YyW" secondAttribute="trailing" id="Eoq-8g-MZG"/>
+                            <constraint firstItem="qO6-WD-Xvn" firstAttribute="top" secondItem="uqD-FQ-YyW" secondAttribute="top" id="YpM-a4-CTl"/>
+                            <constraint firstItem="qO6-WD-Xvn" firstAttribute="bottom" secondItem="uqD-FQ-YyW" secondAttribute="bottom" id="pLu-47-5J9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uqD-FQ-YyW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="cuC-Ys-7Af">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iUf-6Y-ad1">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="YwB-J7-oiz" id="rP5-3Q-FS9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButtonPressed" destination="iUf-6Y-ad1" id="xwk-Zb-pfc"/>
+                        <outlet property="collectionView" destination="qO6-WD-Xvn" id="0Ss-Y2-CzH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfj-7E-av3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4733.6000000000004" y="-238.83058470764618"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="4C3-e6-RxV">
