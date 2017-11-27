@@ -7,12 +7,14 @@
 //
 
 #import <Realm/Realm.h>
+#import "LikedProduct.h"
 #import "Card.h"
 
 @interface Profile : RLMObject
 
 @property NSInteger id;
 @property RLMArray <Card> *cards;
+@property RLMArray <LikedProduct> *likedProducts;
 @property NSString *emaleString;
 @property NSString *passwordString;
 @property NSString *isLogged;

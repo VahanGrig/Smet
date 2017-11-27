@@ -11,11 +11,14 @@
 #import "ProducerViewController.h"
 #import "ProductCell.h"
 #import "AllProducts.h"
+#import "Profile.h"
 
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
 @property (nonatomic) RLMResults <AllProducts *> *allProducts;
+@property (nonatomic) RLMResults <Profile*> *profilesArray;
+@property (nonatomic) RLMArray *likedProducts;
 
 @end
 
@@ -26,6 +29,8 @@ static NSString *cellIdentifier = @"productCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.allProducts = [[AllProducts allObjects] sortedResultsUsingKeyPath:@"id" ascending:YES];
+    self.profilesArray = [[Profile allObjects] sortedResultsUsingKeyPath:@"profileID" ascending:YES];
+    self.likedProducts = self.profilesArray[0].likedProducts;
     [self.collection registerClass:[ProductCell class] forCellWithReuseIdentifier: cellIdentifier];
     [self configureNavigationBar];
 }
@@ -53,10 +58,25 @@ static NSString *cellIdentifier = @"productCell";
     ProductCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     Product *product = self.allProducts[0].products[indexPath.row];
     cell.productName = product.producerName;
-    [cell setLikePressed:^{
-        
+    cell.productId = product.id;
+    [cell setLikePressed:^BOOL(NSString *productName, NSInteger productId) {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        [realm beginWriteTransaction];
+        NSInteger likedProductIndex = [self indexOfProductWithName:productName];
+        if (likedProductIndex >= 0) {
+        [self.likedProducts removeObjectAtIndex:likedProductIndex];
+        } else {
+            LikedProduct *likedProduct = [LikedProduct new];
+            likedProduct.productName = productName;
+            likedProduct.id = productId;
+            [realm addOrUpdateObject:likedProduct];
+            [self.likedProducts addObject:likedProduct];
+        }
+        [realm commitWriteTransaction];
+        return likedProductIndex >= 0;
     }];
-    [cell initCellForLiked:NO];
+    cell.isLiked = [self indexOfProductWithName:product.producerName] >= 0;
+    [cell initCell];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:product.productImageURLString]];
     cell.layer.cornerRadius = 4;
     cell.layer.borderWidth = 1;
@@ -91,6 +111,16 @@ static NSString *cellIdentifier = @"productCell";
 
 - (IBAction)moreButtonPressed:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"card" sender:nil];
+}
+
+- (NSInteger)indexOfProductWithName:(NSString *)productName {
+    
+    for (LikedProduct *likedprod in self.likedProducts) {
+        if ([likedprod.productName isEqualToString:productName]) {
+            return [self.likedProducts indexOfObject:likedprod];
+        }
+    }
+    return -1;
 }
 
 @end

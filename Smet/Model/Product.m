@@ -27,7 +27,10 @@
     if (dictionary[@"producer"][@"name"]) {
         newProduct.producerName = dictionary[@"producer"][@"name"];
     }
-    
+    if (dictionary[@"id"]) {
+        NSNumber *idNumber = dictionary[@"id"];
+        newProduct.id = [idNumber integerValue];
+    }
     return newProduct;
 }
 

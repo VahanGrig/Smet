@@ -12,8 +12,10 @@
 
 @property (nonatomic) UIImageView *imageView;
 @property (nonatomic) NSString *productName;
-@property (nonatomic, copy) void (^likePressed)(void);
+@property (nonatomic) NSInteger productId;
+@property (nonatomic) BOOL isLiked;
+@property (nonatomic, copy) BOOL (^likePressed)(NSString *productName, NSInteger productId);
 
-- (void)initCellForLiked:(BOOL)isliked;
+- (void)initCell;
 
 @end

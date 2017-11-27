@@ -18,7 +18,7 @@
 
 @implementation ProductCell
 
-- (void)initCellForLiked:(BOOL)isliked {
+- (void)initCell {
     
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(12, 12, CGRectGetWidth(self.bounds) - 24, CGRectGetHeight(self.bounds) - 96)];
    
@@ -30,7 +30,7 @@
     [self.productNameLabel setFont:[UIFont boldSystemFontOfSize:14]];
     
     self.likeButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.productNameLabel.frame) + 12, CGRectGetMaxY(self.imageView.frame) + 12, 44, 44)];
-    [self.likeButton setImage:[UIImage imageNamed:isliked ? @"fill_heart" : @"heart"] forState:UIControlStateNormal];
+    [self.likeButton setImage:[UIImage imageNamed:self.isLiked ? @"fill_heart" : @"heart"] forState:UIControlStateNormal];
     [self.likeButton setImageEdgeInsets:UIEdgeInsetsMake(11, 10, 11, 10)];
     [self.likeButton addTarget:self action:@selector(likeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -54,7 +54,8 @@
 
 - (void)likeButtonPressed:(UIButton *)sender {
     if (self.likePressed) {
-        self.likePressed();
+        self.isLiked = self.likePressed(self.productName, self.productId);
+       [self.likeButton setImage:[UIImage imageNamed:!self.isLiked ? @"fill_heart" : @"heart"] forState:UIControlStateNormal];
     }
 }
 

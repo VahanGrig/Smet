@@ -33,7 +33,6 @@ static NSString * const baseUrl = @"http://termbin.com/";
             allProducts.id = 1;
             for (NSDictionary *productDict in productsArray) {
                 Product *newProduct = [Product initWithDictionary:productDict];
-                newProduct.id = [productsArray indexOfObject:productDict];
                 [allProducts.products addObject:newProduct];
             }
             RLMRealm *realm = [RLMRealm defaultRealm];
