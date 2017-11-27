@@ -105,7 +105,6 @@
         [realm commitWriteTransaction];
         [self.navigationController popViewControllerAnimated:YES];
     }
-    
 }
 
 @end

@@ -52,9 +52,15 @@ static NSString *cellIdentifier = @"productCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ProductCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     Product *product = self.allProducts[0].products[indexPath.row];
-    cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    [cell initViewImageView];
+    cell.productName = product.producerName;
+    [cell setLikePressed:^{
+        
+    }];
+    [cell initCellForLiked:NO];
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:product.productImageURLString]];
+    cell.layer.cornerRadius = 4;
+    cell.layer.borderWidth = 1;
+    cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
     return cell;
 }
 

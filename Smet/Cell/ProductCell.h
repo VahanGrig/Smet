@@ -11,7 +11,9 @@
 @interface ProductCell : UICollectionViewCell
 
 @property (nonatomic) UIImageView *imageView;
+@property (nonatomic) NSString *productName;
+@property (nonatomic, copy) void (^likePressed)(void);
 
-- (void)initViewImageView;
+- (void)initCellForLiked:(BOOL)isliked;
 
 @end
