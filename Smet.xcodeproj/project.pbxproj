@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A4765B9FD459BD84A08B201 /* libPods-Smet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34857457700AD7421F31DB5 /* libPods-Smet.a */; };
 		D95030251FC98F6B00C97680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95030221FC98F6B00C97680 /* Assets.xcassets */; };
 		D95030261FC98F6B00C97680 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030231FC98F6B00C97680 /* main.m */; };
 		D95030271FC98F6B00C97680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030241FC98F6B00C97680 /* AppDelegate.m */; };
@@ -20,6 +19,9 @@
 		D95030441FCB56A800C97680 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030431FCB56A800C97680 /* CardCell.m */; };
 		D95030471FCB5F3D00C97680 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030461FCB5F3D00C97680 /* AddCardViewController.m */; };
 		D950304A1FCC9E8800C97680 /* LikedProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = D95030491FCC9E8800C97680 /* LikedProduct.m */; };
+		D96A850A1FCDFAFF0090A9C4 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96A850B1FCDFAFF0090A9C4 /* libAFNetworking.a */; };
+		D96A850E1FCDFB080090A9C4 /* libRealm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96A850F1FCDFB080090A9C4 /* libRealm.a */; };
+		D96A85101FCDFB0C0090A9C4 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96A85111FCDFB0C0090A9C4 /* libSDWebImage.a */; };
 		D9B31DDE1FC5F66400EAD37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DDC1FC5F66400EAD37E /* Main.storyboard */; };
 		D9B31DE31FC5F66400EAD37E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B31DE11FC5F66400EAD37E /* LaunchScreen.storyboard */; };
 		D9B31DF01FC7621500EAD37E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B31DEF1FC7621500EAD37E /* LoginViewController.m */; };
@@ -53,6 +55,14 @@
 		D95030461FCB5F3D00C97680 /* AddCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		D95030481FCC9E8800C97680 /* LikedProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikedProduct.h; sourceTree = "<group>"; };
 		D95030491FCC9E8800C97680 /* LikedProduct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LikedProduct.m; sourceTree = "<group>"; };
+		D96A85031FCDF4760090A9C4 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96A85051FCDF47B0090A9C4 /* libRealm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRealm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96A85071FCDF47F0090A9C4 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96A85091FCDF7990090A9C4 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96A850B1FCDFAFF0090A9C4 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96A850D1FCDFB030090A9C4 /* libPods-Smet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Smet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96A850F1FCDFB080090A9C4 /* libRealm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRealm.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96A85111FCDFB0C0090A9C4 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B31DD31FC5F66400EAD37E /* Smet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B31DDD1FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B31DE21FC5F66400EAD37E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +76,6 @@
 		D9B31E081FC94A2800EAD37E /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		D9B31E0A1FC94D8E00EAD37E /* RequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
 		D9B31E0B1FC94D8E00EAD37E /* RequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
-		E34857457700AD7421F31DB5 /* libPods-Smet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Smet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2953FEEB9D3A7768B9981F /* Pods-Smet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smet/Pods-Smet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A4765B9FD459BD84A08B201 /* libPods-Smet.a in Frameworks */,
+				D96A85101FCDFB0C0090A9C4 /* libSDWebImage.a in Frameworks */,
+				D96A850E1FCDFB080090A9C4 /* libRealm.a in Frameworks */,
+				D96A850A1FCDFAFF0090A9C4 /* libAFNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +96,14 @@
 		AB8EB5A6A23B3946598DFDC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E34857457700AD7421F31DB5 /* libPods-Smet.a */,
+				D96A85111FCDFB0C0090A9C4 /* libSDWebImage.a */,
+				D96A850F1FCDFB080090A9C4 /* libRealm.a */,
+				D96A850D1FCDFB030090A9C4 /* libPods-Smet.a */,
+				D96A850B1FCDFAFF0090A9C4 /* libAFNetworking.a */,
+				D96A85091FCDF7990090A9C4 /* libAFNetworking.a */,
+				D96A85071FCDF47F0090A9C4 /* libSDWebImage.a */,
+				D96A85051FCDF47B0090A9C4 /* libRealm.a */,
+				D96A85031FCDF4760090A9C4 /* libAFNetworking.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -481,11 +499,16 @@
 			baseConfigurationReference = ED2953FEEB9D3A7768B9981F /* Pods-Smet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBY5GUBKXK;
 				INFOPLIST_FILE = Smet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "Vahan-Grigoryan.Smet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -495,11 +518,15 @@
 			baseConfigurationReference = 2169A235FCE5AD6D15657FA6 /* Pods-Smet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MBY5GUBKXK;
 				INFOPLIST_FILE = Smet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Vahan-Grigoryan.Smet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

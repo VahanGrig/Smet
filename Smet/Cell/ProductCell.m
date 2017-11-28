@@ -20,7 +20,7 @@
 
 - (void)initCell {
     
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(12, 12, CGRectGetWidth(self.bounds) - 24, CGRectGetHeight(self.bounds) - 96)];
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 16, CGRectGetWidth(self.bounds) - 32, CGRectGetHeight(self.bounds) - 96)];
    
     self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.imageView.frame) + 12, CGRectGetWidth(self.bounds), 1)];
     [self.lineView setBackgroundColor:[UIColor lightGrayColor]];

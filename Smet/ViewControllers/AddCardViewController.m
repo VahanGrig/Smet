@@ -9,7 +9,7 @@
 #import "AddCardViewController.h"
 #import "Profile.h"
 
-@interface AddCardViewController ()<UITextFieldDelegate>
+@interface AddCardViewController ()<UITextFieldDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic) RLMResults <Profile*> *profilesArray;
 
@@ -27,6 +27,7 @@
     
     self.profilesArray = [[Profile allObjects] sortedResultsUsingKeyPath:@"profileID" ascending:YES];
     
+    self.navigationController.delegate = self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 }
@@ -72,10 +73,10 @@
 #pragma mark - keyboard
 - (void)keyboardDidShow:(NSNotification *)notification {
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-    CGFloat buttonButtomDistance = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(self.saveButton.frame);
+    CGFloat buttonButtomDistance = CGRectGetHeight(self.view.bounds) - CGRectGetMaxY(self.saveButton.frame) - 64;
     
     if (keyboardSize.height > buttonButtomDistance) {
-        CGFloat keyboardButtonGap = keyboardSize.height - buttonButtomDistance;
+        CGFloat keyboardButtonGap = keyboardSize.height - buttonButtomDistance - 64;
         CGPoint scrollOffset = CGPointMake(0, keyboardButtonGap + 12);
         self.scrollView.scrollEnabled = YES;
         [self.scrollView setContentOffset:scrollOffset animated:YES];
@@ -105,6 +106,23 @@
         [realm commitWriteTransaction];
         [self.navigationController popViewControllerAnimated:YES];
     }
+}
+
+
+
+#pragma mark - UINavigationControllerDelegate
+
+- (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController *)navigationController {
+    return [navigationController.topViewController supportedInterfaceOrientations];
+}
+
+// disabling rotation
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationPortrait;
 }
 
 @end

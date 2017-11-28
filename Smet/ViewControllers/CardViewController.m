@@ -15,6 +15,7 @@
 @property (nonatomic) RLMResults <Profile*> *profilesArray;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic) CGSize frameSize;
 
 @end
 
@@ -32,6 +33,14 @@ static NSString *cellIdentifier = @"cardCell";
     [super viewWillAppear:animated];
     self.profilesArray = [[Profile allObjects] sortedResultsUsingKeyPath:@"profileID" ascending:YES];
     [self.collectionView reloadData];
+}
+
+- (void)viewWillLayoutSubviews {
+    if (!CGSizeEqualToSize(self.frameSize, self.view.frame.size)) {
+        [self.collectionView.collectionViewLayout invalidateLayout];
+        [self.collectionView reloadData];
+        self.frameSize = self.view.frame.size;
+    }
 }
 
 #pragma mark - UICollectionViewDataSource

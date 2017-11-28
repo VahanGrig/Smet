@@ -127,7 +127,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collection" destination="KRv-tJ-jz6" id="FNW-JW-vsV"/>
+                        <outlet property="collectionView" destination="KRv-tJ-jz6" id="nbP-3X-wUq"/>
                         <segue destination="wz1-ca-0NW" kind="show" identifier="producer" id="leH-84-Yuv"/>
                         <segue destination="YwB-J7-oiz" kind="show" identifier="card" id="sJj-38-7QX"/>
                     </connections>
@@ -236,7 +236,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e0-9b-9lF">
-                                        <rect key="frame" x="68" y="515" width="240" height="40"/>
+                                        <rect key="frame" x="68" y="412" width="240" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.73135544478527603" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="e6Y-uv-eXS"/>
@@ -256,7 +256,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PoE-z5-d0q">
-                                        <rect key="frame" x="68" y="330" width="240" height="40"/>
+                                        <rect key="frame" x="68" y="227" width="240" height="40"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.20501821319018404" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="cHO-73-MVy"/>
@@ -275,7 +275,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bo8-aH-k7Q">
-                                        <rect key="frame" x="67.5" y="403" width="240" height="40"/>
+                                        <rect key="frame" x="67.5" y="300" width="240" height="40"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.32623178680981596" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="7M3-us-Ovt"/>
@@ -300,8 +300,8 @@
                                     <constraint firstItem="6e0-9b-9lF" firstAttribute="centerX" secondItem="hEq-V3-vHX" secondAttribute="centerX" id="6dZ-uu-jp5"/>
                                     <constraint firstAttribute="trailing" secondItem="6e0-9b-9lF" secondAttribute="trailing" constant="67" id="J1c-KI-Tc4"/>
                                     <constraint firstItem="6e0-9b-9lF" firstAttribute="top" secondItem="Bo8-aH-k7Q" secondAttribute="bottom" constant="72" id="Ubz-zV-SoH"/>
-                                    <constraint firstItem="6e0-9b-9lF" firstAttribute="top" secondItem="hEq-V3-vHX" secondAttribute="top" constant="515" id="Wgm-ft-8FX"/>
-                                    <constraint firstAttribute="bottom" secondItem="6e0-9b-9lF" secondAttribute="bottom" constant="122" id="Z3t-Ve-UP3"/>
+                                    <constraint firstItem="6e0-9b-9lF" firstAttribute="top" secondItem="hEq-V3-vHX" secondAttribute="top" constant="412" id="Wgm-ft-8FX"/>
+                                    <constraint firstAttribute="bottom" secondItem="6e0-9b-9lF" secondAttribute="bottom" constant="222" id="Z3t-Ve-UP3"/>
                                     <constraint firstItem="Bo8-aH-k7Q" firstAttribute="top" secondItem="PoE-z5-d0q" secondAttribute="bottom" constant="33" id="giM-kF-Klf"/>
                                     <constraint firstItem="Bo8-aH-k7Q" firstAttribute="centerX" secondItem="hEq-V3-vHX" secondAttribute="centerX" id="ygs-A2-2O8"/>
                                 </constraints>
@@ -340,7 +340,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS5-97-QEw">
-                                        <rect key="frame" x="68" y="419" width="240" height="40"/>
+                                        <rect key="frame" x="68" y="397" width="240" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="0.73135544480000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Rva-mm-Brl"/>
@@ -407,7 +407,7 @@
                                     <constraint firstItem="h51-EQ-Gf7" firstAttribute="centerX" secondItem="Hk9-jW-Eqv" secondAttribute="centerX" id="au5-Tb-c7r"/>
                                     <constraint firstItem="h51-EQ-Gf7" firstAttribute="top" secondItem="Hk9-jW-Eqv" secondAttribute="top" constant="234" id="e1I-t8-7Fz"/>
                                     <constraint firstAttribute="bottom" secondItem="hS5-97-QEw" secondAttribute="bottom" constant="208" id="iom-g5-gGJ"/>
-                                    <constraint firstItem="hS5-97-QEw" firstAttribute="top" secondItem="DH3-H4-cfb" secondAttribute="bottom" constant="72" id="ypK-dx-lVV"/>
+                                    <constraint firstItem="hS5-97-QEw" firstAttribute="top" secondItem="DH3-H4-cfb" secondAttribute="bottom" constant="50" id="ypK-dx-lVV"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

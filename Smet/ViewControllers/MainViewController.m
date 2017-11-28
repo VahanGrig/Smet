@@ -15,10 +15,11 @@
 
 @interface MainViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collection;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) RLMResults <AllProducts *> *allProducts;
 @property (nonatomic) RLMResults <Profile*> *profilesArray;
 @property (nonatomic) RLMArray *likedProducts;
+@property (nonatomic) CGSize frameSize;
 
 @end
 
@@ -31,8 +32,16 @@ static NSString *cellIdentifier = @"productCell";
     self.allProducts = [[AllProducts allObjects] sortedResultsUsingKeyPath:@"id" ascending:YES];
     self.profilesArray = [[Profile allObjects] sortedResultsUsingKeyPath:@"profileID" ascending:YES];
     self.likedProducts = self.profilesArray[0].likedProducts;
-    [self.collection registerClass:[ProductCell class] forCellWithReuseIdentifier: cellIdentifier];
+    [self.collectionView registerClass:[ProductCell class] forCellWithReuseIdentifier: cellIdentifier];
     [self configureNavigationBar];
+}
+
+- (void)viewWillLayoutSubviews {
+    if (!CGSizeEqualToSize(self.frameSize, self.view.frame.size)) {
+        [self.collectionView.collectionViewLayout invalidateLayout];
+        [self.collectionView reloadData];
+        self.frameSize = self.view.frame.size;
+    }
 }
 
 - (void)configureNavigationBar {
@@ -59,6 +68,7 @@ static NSString *cellIdentifier = @"productCell";
     Product *product = self.allProducts[0].products[indexPath.row];
     cell.productName = product.producerName;
     cell.productId = product.id;
+    
     [cell setLikePressed:^BOOL(NSString *productName, NSInteger productId) {
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm beginWriteTransaction];
@@ -77,7 +87,16 @@ static NSString *cellIdentifier = @"productCell";
     }];
     cell.isLiked = [self indexOfProductWithName:product.producerName] >= 0;
     [cell initCell];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:product.productImageURLString]];
+   __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activity.center = cell.imageView.center;
+    [cell addSubview:activity];
+    [activity startAnimating];
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:product.productImageURLString] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        [activity stopAnimating];
+        [activity removeFromSuperview];
+        activity = nil;
+        cell.imageView.image = image;
+    }];
     cell.layer.cornerRadius = 4;
     cell.layer.borderWidth = 1;
     cell.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -92,7 +111,7 @@ static NSString *cellIdentifier = @"productCell";
 }
 
 -(void)viewDidLayoutSubviews {
-    self.collection.contentInset = UIEdgeInsetsMake(12, 12, 12, 12);
+    self.collectionView.contentInset = UIEdgeInsetsMake(12, 12, 12, 12);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
