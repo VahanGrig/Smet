@@ -65,16 +65,18 @@ static NSString *cellIdentifier = @"productCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ProductCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
     Product *product = self.allProducts[0].products[indexPath.row];
     cell.productName = product.producerName;
     cell.productId = product.id;
     
+    //This code is for adding/removing liked products to/from profile liked products
     [cell setLikePressed:^BOOL(NSString *productName, NSInteger productId) {
         RLMRealm *realm = [RLMRealm defaultRealm];
         [realm beginWriteTransaction];
         NSInteger likedProductIndex = [self indexOfProductWithName:productName];
         if (likedProductIndex >= 0) {
-        [self.likedProducts removeObjectAtIndex:likedProductIndex];
+            [self.likedProducts removeObjectAtIndex:likedProductIndex];
         } else {
             LikedProduct *likedProduct = [LikedProduct new];
             likedProduct.productName = productName;
@@ -85,9 +87,12 @@ static NSString *cellIdentifier = @"productCell";
         [realm commitWriteTransaction];
         return likedProductIndex >= 0;
     }];
+    
     cell.isLiked = [self indexOfProductWithName:product.producerName] >= 0;
     [cell initCell];
-   __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    //setting image to cell imageView from given url
+    __block UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activity.center = cell.imageView.center;
     [cell addSubview:activity];
     [activity startAnimating];
@@ -120,7 +125,6 @@ static NSString *cellIdentifier = @"productCell";
 }
 
 #pragma mark - segue
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(Product *)sender {
     if ([segue.identifier isEqualToString:@"producer"]) {
     ProducerViewController *vc = [segue destinationViewController];
@@ -132,8 +136,9 @@ static NSString *cellIdentifier = @"productCell";
     [self performSegueWithIdentifier:@"card" sender:nil];
 }
 
+
+//Get profile liked product index if liked products contain it
 - (NSInteger)indexOfProductWithName:(NSString *)productName {
-    
     for (LikedProduct *likedprod in self.likedProducts) {
         if ([likedprod.productName isEqualToString:productName]) {
             return [self.likedProducts indexOfObject:likedprod];

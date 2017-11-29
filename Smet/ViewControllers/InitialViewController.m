@@ -20,8 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //Requesting for data
     [[RequestManager manager] getCategoriesWithCompletion:^(id result) {
-        
+        NSLog(@"Request succeeded! :)");
+    } failer:^(id result) {
+        NSLog(@"Request failed! :(");
     }];
 }
 

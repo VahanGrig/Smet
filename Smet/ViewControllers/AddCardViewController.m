@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.profilesArray = [[Profile allObjects] sortedResultsUsingKeyPath:@"profileID" ascending:YES];
     
     self.navigationController.delegate = self;
@@ -33,6 +32,7 @@
 }
 
 - (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) + 264);
     self.cardNameTextField.layer.sublayerTransform = CATransform3DMakeTranslation(6, 0, 0);
     self.cardNumberTextField.layer.sublayerTransform = CATransform3DMakeTranslation(6, 0, 0);
@@ -61,11 +61,11 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
     if ([textField isEqual:self.cardNumberTextField]) {
-    if (range.length + range.location > textField.text.length) {
-        return NO;
-    }
-    NSUInteger newLength = [textField.text length] + [string length] - range.length;
-    return newLength <= 9;
+        if (range.length + range.location > textField.text.length) {
+            return NO;
+        }
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return newLength <= 9;
     }
     return YES;
 }
@@ -108,8 +108,6 @@
     }
 }
 
-
-
 #pragma mark - UINavigationControllerDelegate
 
 - (UIInterfaceOrientationMask)navigationControllerSupportedInterfaceOrientations:(UINavigationController *)navigationController {
@@ -123,6 +121,10 @@
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
     return UIInterfaceOrientationPortrait;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

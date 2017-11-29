@@ -36,6 +36,7 @@ static NSString *cellIdentifier = @"cardCell";
 }
 
 - (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
     if (!CGSizeEqualToSize(self.frameSize, self.view.frame.size)) {
         [self.collectionView.collectionViewLayout invalidateLayout];
         [self.collectionView reloadData];
@@ -67,9 +68,9 @@ static NSString *cellIdentifier = @"cardCell";
 }
 
 -(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     self.collectionView.contentInset = UIEdgeInsetsMake(12, 12, 12, 12);
 }
-
 
 - (IBAction)addButtonPressed:(UIBarButtonItem *)sender {
     [self performSegueWithIdentifier:@"addCard" sender:nil];

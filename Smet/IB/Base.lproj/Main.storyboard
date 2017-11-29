@@ -93,14 +93,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="133" height="111"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.boarderWidht">
-                                                <integer key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>

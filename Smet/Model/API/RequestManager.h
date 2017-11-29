@@ -9,11 +9,11 @@
 #import <AFNetworking/AFNetworking.h>
 
 typedef void (^Completion)(id result);
-typedef void (^Failed)(id result);
+typedef void (^Failer)(id result);
 
 @interface RequestManager : AFHTTPSessionManager
 
 + (instancetype)manager;
-- (void)getCategoriesWithCompletion:(Completion)completion;
+- (void)getCategoriesWithCompletion:(Completion)completion failer:(Failer)failer;
 
 @end

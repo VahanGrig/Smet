@@ -18,15 +18,14 @@ static NSString * const baseUrl = @"http://termbin.com/";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[RequestManager alloc] initWithBaseURL:[NSURL URLWithString:baseUrl]];
-        
     });
     return instance;
 }
 
-- (void)getCategoriesWithCompletion:(Completion)completion {
+- (void)getCategoriesWithCompletion:(Completion)completion failer:(Failer)failer {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
-    [manager GET:@"http://termbin.com/a3rf" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager GET:baseUrl parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         if ([responseObject[@"result"] isKindOfClass:[NSArray class]]) {
             NSArray *productsArray = responseObject[@"result"];
             AllProducts *allProducts = [AllProducts new];
@@ -42,7 +41,7 @@ static NSString * const baseUrl = @"http://termbin.com/";
         }
         completion(responseObject);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
-     
+        failer(error);
     }];
 }
 

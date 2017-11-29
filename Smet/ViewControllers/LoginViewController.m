@@ -30,13 +30,13 @@
 }
 
 - (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
     self.scrollView.contentSize = CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) + 264);
     self.emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(6, 0, 0);
     self.passwordTextField.layer.sublayerTransform = CATransform3DMakeTranslation(6, 0, 0);
 }
 
 #pragma mark - UITextFieldDelegate
-
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [textField becomeFirstResponder];
 }
@@ -54,7 +54,6 @@
 - (void)textFieldDidEndEditing:(UITextField *)TextField {
     [TextField resignFirstResponder];
 }
-
 
 #pragma mark - keyboard
 - (void)keyboardDidShow:(NSNotification *)notification {
@@ -74,6 +73,7 @@
     self.scrollView.scrollEnabled = NO;
 }
 
+#pragma mark - button action
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     if (self.emailTextField.text.length && self.passwordTextField.text.length) {
         Profile *newProfile = [Profile new];
@@ -90,13 +90,17 @@
 }
 
 #pragma mark - rotation
-// disabling rotation
+// handling rotation
 - (UIInterfaceOrientationMask) supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
 }
 
 - (UIInterfaceOrientation) preferredInterfaceOrientationForPresentation {
     return UIInterfaceOrientationPortrait;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
