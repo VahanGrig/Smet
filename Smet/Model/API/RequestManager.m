@@ -25,7 +25,7 @@ static NSString * const baseUrl = @"http://termbin.com/";
 - (void)getCategoriesWithCompletion:(Completion)completion failer:(Failer)failer {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
-    [manager GET:baseUrl parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    [manager GET:@"http://termbin.com/a3rf" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         if ([responseObject[@"result"] isKindOfClass:[NSArray class]]) {
             NSArray *productsArray = responseObject[@"result"];
             AllProducts *allProducts = [AllProducts new];
